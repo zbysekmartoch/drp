@@ -37,39 +37,39 @@ A modern web application for collecting market data through questionnaires. Buil
 ### Installation
 
 1. **Clone the repository**
-\`\`\`bash
+```bash
 git clone https://github.com/zbysekmartoch/drp.git
 cd drp
-\`\`\`
+```
 
 2. **Set up the database**
-\`\`\`bash
+```bash
 mysql -u root -p < backend/schema.sql
-\`\`\`
+```
 
 3. **Configure environment**
-\`\`\`bash
+```bash
 cp backend/.env.example backend/.env
 # Edit .env with your database credentials
-\`\`\`
+```
 
 4. **Install dependencies**
-\`\`\`bash
+```bash
 # Backend
 cd backend && npm install
 
 # Frontend
 cd ../frontend && npm install
-\`\`\`
+```
 
 5. **Start the servers**
-\`\`\`bash
+```bash
 # Backend (from backend directory)
 npm start
 
 # Frontend (from frontend directory)
 npm run dev
-\`\`\`
+```
 
 6. **Open the application**
 - Frontend: http://localhost:5174
@@ -77,7 +77,7 @@ npm run dev
 
 ## Project Structure
 
-\`\`\`
+```
 drp/
 ├── backend/
 │   ├── src/
@@ -101,18 +101,18 @@ drp/
 │   └── index.html
 │
 └── README.md
-\`\`\`
+```
 
 ## Question Types
 
 | Type | Description |
 |------|-------------|
-| \`short_text\` | Single-line text input |
-| \`long_text\` | Multi-line textarea |
-| \`radio\` | Single choice from options |
-| \`checkbox\` | Multiple choice from options |
-| \`scale\` | Numeric scale with labels |
-| \`file\` | File upload |
+| short_text | Single-line text input |
+| long_text | Multi-line textarea |
+| radio | Single choice from options |
+| checkbox | Multiple choice from options |
+| scale | Numeric scale with labels |
+| file | File upload |
 
 ## Localization
 
