@@ -1,0 +1,247 @@
+{
+  "common": {
+    "save": "Uložit",
+    "cancel": "Zrušit",
+    "delete": "Smazat",
+    "edit": "Upravit",
+    "add": "Přidat",
+    "close": "Zavřít",
+    "back": "Zpět",
+    "next": "Další",
+    "previous": "Předchozí",
+    "loading": "Načítání...",
+    "error": "Chyba",
+    "success": "Úspěch",
+    "confirm": "Potvrdit",
+    "yes": "Ano",
+    "no": "Ne",
+    "search": "Hledat",
+    "filter": "Filtrovat",
+    "export": "Exportovat",
+    "import": "Importovat",
+    "download": "Stáhnout",
+    "upload": "Nahrát",
+    "copy": "Kopírovat",
+    "copied": "Zkopírováno!",
+    "actions": "Akce",
+    "status": "Stav",
+    "created": "Vytvořeno",
+    "updated": "Upraveno",
+    "name": "Název",
+    "description": "Popis",
+    "title": "Název",
+    "required": "Povinné",
+    "optional": "Volitelné",
+    "all": "Vše",
+    "none": "Žádné",
+    "logout": "Odhlásit se",
+    "login": "Přihlásit se",
+    "email": "E-mail",
+    "password": "Heslo"
+  },
+  "nav": {
+    "home": "Domů",
+    "dashboard": "Přehled",
+    "questionnaires": "Dotazníky",
+    "respondents": "Respondenti",
+    "responses": "Odpovědi",
+    "editor": "Editor",
+    "settings": "Nastavení",
+    "preview": "Náhled"
+  },
+  "home": {
+    "title": "DRP – Data Request Portal",
+    "subtitle": "Systém pro sběr tržních dat",
+    "newQuestionnaire": "Nový dotazník",
+    "searchPlaceholder": "Hledat dotazníky...",
+    "noQuestionnaires": "Zatím žádné dotazníky",
+    "createFirst": "Vytvořte svůj první dotazník",
+    "tableHeaders": {
+      "name": "Název",
+      "code": "Kód",
+      "respondents": "Respondenti",
+      "opened": "Otevřeno",
+      "responses": "Odpovědí",
+      "updated": "Upraveno"
+    },
+    "deleteConfirm": {
+      "title": "Smazat dotazník",
+      "message": "Tato akce je nevratná. Budou smazány všechny odpovědi, nahrané soubory a historie verzí.",
+      "confirmButton": "Smazat"
+    }
+  },
+  "create": {
+    "title": "Nový dotazník",
+    "subtitle": "Vytvořte nový formulář pro sběr dat",
+    "basicInfo": "Základní informace",
+    "nameLabel": "Název dotazníku",
+    "namePlaceholder": "např. Sběr tržních dat 2025",
+    "descriptionLabel": "Popis",
+    "descriptionPlaceholder": "Volitelný popis dotazníku...",
+    "createButton": "Vytvořit dotazník",
+    "creating": "Vytvářím..."
+  },
+  "editor": {
+    "title": "Editor dotazníku",
+    "overview": "Přehled",
+    "builder": "Editor",
+    "respondentsTab": "Respondenti",
+    "responsesTab": "Odpovědi",
+    "saving": "Ukládám...",
+    "saved": "Uloženo",
+    "addBlock": "Přidat blok",
+    "addQuestion": "Přidat otázku",
+    "blockTitle": "Název bloku",
+    "blockDescription": "Popis bloku",
+    "questionLabel": "Text otázky",
+    "questionDescription": "Popis otázky",
+    "questionVariable": "Název proměnné",
+    "questionRequired": "Povinná",
+    "questionTypes": {
+      "text": "Krátký text",
+      "textarea": "Dlouhý text",
+      "radio": "Výběr jedné možnosti",
+      "checkbox": "Výběr více možností",
+      "scale": "Škála",
+      "file": "Nahrání souboru"
+    },
+    "options": {
+      "title": "Možnosti",
+      "addOption": "Přidat možnost",
+      "optionLabel": "Popisek",
+      "optionValue": "Hodnota"
+    },
+    "scale": {
+      "min": "Minimum",
+      "max": "Maximum",
+      "step": "Krok",
+      "labels": "Popisky hodnot",
+      "addLabel": "+ Přidat popisek",
+      "valuePlaceholder": "Hodnota",
+      "labelPlaceholder": "Popisek hodnoty",
+      "noLabels": "Žádné popisky. Přidejte popisky pro hodnoty na škále."
+    },
+    "file": {
+      "maxFiles": "Maximální počet souborů",
+      "allowedTypes": "Povolené typy souborů"
+    }
+  },
+  "dashboard": {
+    "title": "Přehled",
+    "stats": {
+      "respondents": "Respondentů",
+      "opened": "Otevřeno",
+      "inProgress": "Rozpracováno",
+      "responses": "Odpovědí"
+    },
+    "quickActions": "Rychlé akce",
+    "editQuestionnaire": "Upravit dotazník",
+    "editDescription": "Přidejte nebo upravte otázky",
+    "manageRespondents": "Správa respondentů",
+    "respondentsDescription": "Přidejte respondenty a generujte odkazy",
+    "viewResponses": "Zobrazit odpovědi",
+    "responsesDescription": "Procházejte přijaté odpovědi",
+    "recentResponses": "Poslední odpovědi",
+    "noResponses": "Zatím žádné odpovědi",
+    "exportData": "Exportovat data"
+  },
+  "respondents": {
+    "title": "Správa respondentů",
+    "addRespondent": "Přidat respondenta",
+    "addMultiple": "Přidat více",
+    "bulkActions": "Hromadné akce",
+    "selected": "vybráno",
+    "generateLinks": "Generovat odkazy",
+    "copyLink": "Kopírovat odkaz",
+    "linkCopied": "Odkaz zkopírován do schránky",
+    "openForm": "Otevřít formulář",
+    "deleteSelected": "Smazat vybrané",
+    "tableHeaders": {
+      "name": "Název",
+      "ico": "IČO",
+      "token": "Token",
+      "opened": "Otevřeno",
+      "validUntil": "Platnost do",
+      "status": "Stav"
+    },
+    "statuses": {
+      "notOpened": "Neotevřeno",
+      "viewed": "Zobrazeno",
+      "inProgress": "Rozpracováno",
+      "submitted": "Odesláno",
+      "locked": "Uzamčeno"
+    },
+    "validity": {
+      "notYet": "Ještě ne",
+      "expired": "Vypršelo"
+    },
+    "noRespondents": "Zatím nejsou žádní respondenti",
+    "addFirst": "Přidat prvního respondenta",
+    "form": {
+      "name": "Název respondenta",
+      "namePlaceholder": "např. Firma s.r.o.",
+      "ico": "IČO (volitelné)",
+      "email": "E-mail (volitelný)",
+      "note": "Interní poznámka",
+      "validFrom": "Platnost od",
+      "validUntil": "Platnost do"
+    }
+  },
+  "responses": {
+    "title": "Přijaté odpovědi",
+    "noResponses": "Zatím nebyly přijaty žádné odpovědi",
+    "waitingDescription": "Jakmile respondenti odešlou formuláře, odpovědi se zde zobrazí.",
+    "tableHeaders": {
+      "respondent": "Respondent",
+      "ico": "IČO",
+      "submittedAt": "Odesláno",
+      "status": "Stav"
+    },
+    "exportCSV": "Exportovat CSV",
+    "exportXLSX": "Exportovat XLSX"
+  },
+  "form": {
+    "title": "Formulář pro sběr dat",
+    "intro": "Vyplňte prosím všechna povinná pole a odešlete formulář.",
+    "requiredField": "Toto pole je povinné",
+    "submit": "Odeslat formulář",
+    "submitting": "Odesílám...",
+    "submitted": "Formulář odeslán",
+    "submittedMessage": "Děkujeme! Vaše odpověď byla zaznamenána.",
+    "alreadySubmitted": "Tento formulář jste již odeslali.",
+    "expired": "Platnost tohoto formuláře vypršela.",
+    "notYetValid": "Tento formulář ještě není k dispozici.",
+    "invalidToken": "Neplatný nebo vypršelý přístupový odkaz.",
+    "autosaved": "Automaticky uloženo",
+    "progress": "Průběh",
+    "dragFile": "Přetáhněte soubor nebo",
+    "selectFile": "vyberte z počítače",
+    "maxFileSize": "Maximální velikost souboru",
+    "uploadedFiles": "Nahrané soubory",
+    "removeFile": "Odebrat soubor"
+  },
+  "auth": {
+    "loginTitle": "Přihlášení",
+    "loginSubtitle": "Přihlaste se pro přístup do administrace",
+    "emailPlaceholder": "vas@email.cz",
+    "passwordPlaceholder": "Vaše heslo",
+    "loginButton": "Přihlásit se",
+    "loggingIn": "Přihlašuji...",
+    "logoutButton": "Odhlásit se",
+    "invalidCredentials": "Neplatný e-mail nebo heslo"
+  },
+  "language": {
+    "select": "Jazyk",
+    "cs": "Čeština",
+    "sk": "Slovenčina",
+    "en": "English"
+  },
+  "errors": {
+    "generic": "Došlo k chybě. Zkuste to prosím znovu.",
+    "notFound": "Stránka nenalezena",
+    "unauthorized": "Nemáte oprávnění k přístupu na tuto stránku",
+    "serverError": "Chyba serveru. Zkuste to prosím později.",
+    "networkError": "Chyba sítě. Zkontrolujte připojení.",
+    "validationError": "Zkontrolujte prosím zadané údaje"
+  }
+}

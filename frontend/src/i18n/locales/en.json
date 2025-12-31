@@ -1,0 +1,247 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "actions": "Actions",
+    "status": "Status",
+    "created": "Created",
+    "updated": "Updated",
+    "name": "Name",
+    "description": "Description",
+    "title": "Title",
+    "required": "Required",
+    "optional": "Optional",
+    "all": "All",
+    "none": "None",
+    "logout": "Logout",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "questionnaires": "Questionnaires",
+    "respondents": "Respondents",
+    "responses": "Responses",
+    "editor": "Editor",
+    "settings": "Settings",
+    "preview": "Preview"
+  },
+  "home": {
+    "title": "DRP – Data Request Portal",
+    "subtitle": "System for collecting market data",
+    "newQuestionnaire": "New Questionnaire",
+    "searchPlaceholder": "Search questionnaires...",
+    "noQuestionnaires": "No questionnaires yet",
+    "createFirst": "Create your first questionnaire",
+    "tableHeaders": {
+      "name": "Name",
+      "code": "Code",
+      "respondents": "Respondents",
+      "opened": "Opened",
+      "responses": "Responses",
+      "updated": "Updated"
+    },
+    "deleteConfirm": {
+      "title": "Delete Questionnaire",
+      "message": "This action is irreversible. All responses, uploaded files and version history will be deleted.",
+      "confirmButton": "Delete"
+    }
+  },
+  "create": {
+    "title": "New Questionnaire",
+    "subtitle": "Create a new form for data collection",
+    "basicInfo": "Basic Information",
+    "nameLabel": "Questionnaire Name",
+    "namePlaceholder": "e.g. Market Data Collection 2025",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Optional questionnaire description...",
+    "createButton": "Create Questionnaire",
+    "creating": "Creating..."
+  },
+  "editor": {
+    "title": "Questionnaire Editor",
+    "overview": "Overview",
+    "builder": "Builder",
+    "respondentsTab": "Respondents",
+    "responsesTab": "Responses",
+    "saving": "Saving...",
+    "saved": "Saved",
+    "addBlock": "Add Block",
+    "addQuestion": "Add Question",
+    "blockTitle": "Block Title",
+    "blockDescription": "Block Description",
+    "questionLabel": "Question Label",
+    "questionDescription": "Question Description",
+    "questionVariable": "Variable Name",
+    "questionRequired": "Required",
+    "questionTypes": {
+      "text": "Short Text",
+      "textarea": "Long Text",
+      "radio": "Single Choice",
+      "checkbox": "Multiple Choice",
+      "scale": "Scale",
+      "file": "File Upload"
+    },
+    "options": {
+      "title": "Options",
+      "addOption": "Add Option",
+      "optionLabel": "Label",
+      "optionValue": "Value"
+    },
+    "scale": {
+      "min": "Minimum",
+      "max": "Maximum",
+      "step": "Step",
+      "labels": "Value Labels",
+      "addLabel": "+ Add Label",
+      "valuePlaceholder": "Value",
+      "labelPlaceholder": "Label for this value",
+      "noLabels": "No labels. Add labels for scale values."
+    },
+    "file": {
+      "maxFiles": "Maximum Files",
+      "allowedTypes": "Allowed File Types"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "stats": {
+      "respondents": "Respondents",
+      "opened": "Opened",
+      "inProgress": "In Progress",
+      "responses": "Responses"
+    },
+    "quickActions": "Quick Actions",
+    "editQuestionnaire": "Edit Questionnaire",
+    "editDescription": "Add or modify questions",
+    "manageRespondents": "Manage Respondents",
+    "respondentsDescription": "Add respondents and generate links",
+    "viewResponses": "View Responses",
+    "responsesDescription": "Browse received responses",
+    "recentResponses": "Recent Responses",
+    "noResponses": "No responses yet",
+    "exportData": "Export Data"
+  },
+  "respondents": {
+    "title": "Respondent Management",
+    "addRespondent": "Add Respondent",
+    "addMultiple": "Add Multiple",
+    "bulkActions": "Bulk Actions",
+    "selected": "selected",
+    "generateLinks": "Generate Links",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied to clipboard",
+    "openForm": "Open Form",
+    "deleteSelected": "Delete Selected",
+    "tableHeaders": {
+      "name": "Name",
+      "ico": "Company ID",
+      "token": "Token",
+      "opened": "Opened",
+      "validUntil": "Valid Until",
+      "status": "Status"
+    },
+    "statuses": {
+      "notOpened": "Not Opened",
+      "viewed": "Viewed",
+      "inProgress": "In Progress",
+      "submitted": "Submitted",
+      "locked": "Locked"
+    },
+    "validity": {
+      "notYet": "Not yet valid",
+      "expired": "Expired"
+    },
+    "noRespondents": "No respondents yet",
+    "addFirst": "Add first respondent",
+    "form": {
+      "name": "Respondent Name",
+      "namePlaceholder": "e.g. Company s.r.o.",
+      "ico": "Company ID (optional)",
+      "email": "Email (optional)",
+      "note": "Internal Note",
+      "validFrom": "Valid From",
+      "validUntil": "Valid Until"
+    }
+  },
+  "responses": {
+    "title": "Received Responses",
+    "noResponses": "No responses received yet",
+    "waitingDescription": "Once respondents submit their forms, responses will appear here.",
+    "tableHeaders": {
+      "respondent": "Respondent",
+      "ico": "Company ID",
+      "submittedAt": "Submitted At",
+      "status": "Status"
+    },
+    "exportCSV": "Export CSV",
+    "exportXLSX": "Export XLSX"
+  },
+  "form": {
+    "title": "Data Collection Form",
+    "intro": "Please fill in all required fields and submit the form.",
+    "requiredField": "This field is required",
+    "submit": "Submit Form",
+    "submitting": "Submitting...",
+    "submitted": "Form Submitted",
+    "submittedMessage": "Thank you! Your response has been recorded.",
+    "alreadySubmitted": "You have already submitted this form.",
+    "expired": "This form has expired.",
+    "notYetValid": "This form is not yet available.",
+    "invalidToken": "Invalid or expired access link.",
+    "autosaved": "Auto-saved",
+    "progress": "Progress",
+    "dragFile": "Drag file here or",
+    "selectFile": "select from computer",
+    "maxFileSize": "Maximum file size",
+    "uploadedFiles": "Uploaded Files",
+    "removeFile": "Remove File"
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "loginSubtitle": "Sign in to access the administration",
+    "emailPlaceholder": "your@email.com",
+    "passwordPlaceholder": "Your password",
+    "loginButton": "Sign In",
+    "loggingIn": "Signing in...",
+    "logoutButton": "Logout",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "language": {
+    "select": "Language",
+    "cs": "Čeština",
+    "sk": "Slovenčina",
+    "en": "English"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "notFound": "Page not found",
+    "unauthorized": "You are not authorized to access this page",
+    "serverError": "Server error. Please try again later.",
+    "networkError": "Network error. Check your connection.",
+    "validationError": "Please check the entered data"
+  }
+}
