@@ -7,27 +7,84 @@
 
 ## Authentication
 
-### Editor Session
-Editors authenticate using the questionnaire code. A session token is returned.
+The application uses two authentication methods:
 
+### 1. JWT Authentication (Primary)
+
+Users can register and login to get a JWT token that provides access to all questionnaires.
+
+#### Login
 ```http
-POST /api/editor/session
+POST /api/auth/login
 Content-Type: application/json
 
 {
-  "code": "QNR-2025-ABCD1234"
+  "email": "user@example.com",
+  "password": "password123"
 }
 ```
 
 Response:
 ```json
 {
-  "token": "jwt-session-token",
+  "token": "eyJhbGciOiJIUzI1NiIs...",
+  "user": {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "user@example.com",
+    "role": "user"
+  }
+}
+```
+
+#### Register
+```http
+POST /api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "user@example.com",
+  "password": "password123"
+}
+```
+
+#### Get Current User
+```http
+GET /api/auth/me
+Authorization: Bearer {jwt-token}
+```
+
+### 2. Editor Session (Legacy/Per-Questionnaire)
+
+Each questionnaire can have its own edit password. This creates a session for that specific questionnaire only.
+
+```http
+POST /api/e/{code}/login
+Content-Type: application/json
+
+{
+  "password": "questionnaire-edit-password"
+}
+```
+
+Response:
+```json
+{
+  "sessionId": "session-uuid",
   "questionnaire": { ... }
 }
 ```
 
-### Respondent Token
+Use the session ID in subsequent requests:
+```http
+X-Editor-Session: {session-id}
+```
+
+### 3. Respondent Token
+
 Respondents access forms using unique tokens embedded in URLs:
 ```
 /r/{token}
@@ -50,8 +107,8 @@ Response:
     "code": "QNR-2025-ABCD1234",
     "title": "Market Survey 2025",
     "description": "...",
+    "status": "published",
     "created_at": "2025-01-01T00:00:00.000Z",
-    "updated_at": "2025-01-01T00:00:00.000Z",
     "respondent_count": 10,
     "opened_count": 5,
     "submitted_count": 3
@@ -64,9 +121,15 @@ Response:
 GET /api/questionnaires/:id
 ```
 
+### Get Questionnaire by Code
+```http
+GET /api/questionnaires/code/:code
+```
+
 ### Create Questionnaire
 ```http
 POST /api/questionnaires
+Authorization: Bearer {jwt-token}
 Content-Type: application/json
 
 {
@@ -78,50 +141,44 @@ Content-Type: application/json
 ### Delete Questionnaire
 ```http
 DELETE /api/questionnaires/:id
-```
-
-### Get Questionnaire by Code
-```http
-GET /api/questionnaires/code/:code
+Authorization: Bearer {jwt-token}
 ```
 
 ---
 
 ## Editor Endpoints
 
-All editor endpoints require the `Authorization` header with the session token.
+All editor endpoints require either:
+- JWT token: `Authorization: Bearer {token}` (access to all questionnaires)
+- Editor session: `X-Editor-Session: {session-id}` (access to single questionnaire)
 
+Base path: `/api/e/{code}/`
+
+### Get Dashboard
 ```http
-Authorization: Bearer {session-token}
+GET /api/e/{code}/dashboard
 ```
 
-### Update Questionnaire Definition
+### Update Definition
 ```http
-PUT /api/editor/definition
+PUT /api/e/{code}/definition
 Content-Type: application/json
 
 {
   "definition": {
-    "blocks": [
-      {
-        "id": "block-1",
-        "title": "General Information",
-        "description": "...",
-        "questions": [...]
-      }
-    ]
+    "blocks": [...]
   }
 }
 ```
 
 ### List Respondents
 ```http
-GET /api/editor/respondents
+GET /api/e/{code}/respondents
 ```
 
 ### Add Respondent
 ```http
-POST /api/editor/respondents
+POST /api/e/{code}/respondents
 Content-Type: application/json
 
 {
@@ -136,7 +193,7 @@ Content-Type: application/json
 
 ### Import Respondents
 ```http
-POST /api/editor/respondents/import
+POST /api/e/{code}/respondents/import
 Content-Type: application/json
 
 {
@@ -149,7 +206,7 @@ Content-Type: application/json
 
 ### Update Respondent
 ```http
-PUT /api/editor/respondents/:id
+PUT /api/e/{code}/respondents/:id
 Content-Type: application/json
 
 {
@@ -160,7 +217,7 @@ Content-Type: application/json
 
 ### Bulk Update Respondents
 ```http
-PUT /api/editor/respondents/bulk
+PUT /api/e/{code}/respondents/bulk
 Content-Type: application/json
 
 {
@@ -172,19 +229,29 @@ Content-Type: application/json
 
 ### Delete Respondent
 ```http
-DELETE /api/editor/respondents/:id
+DELETE /api/e/{code}/respondents/:id
+```
+
+### Delete Multiple Respondents
+```http
+DELETE /api/e/{code}/respondents/bulk
+Content-Type: application/json
+
+{
+  "ids": [1, 2, 3]
+}
 ```
 
 ### Get Submission
 ```http
-GET /api/editor/submissions/:respondentId
+GET /api/e/{code}/submissions/:respondentId
 ```
 
 ### Export Data
 ```http
-GET /api/editor/export/csv
-GET /api/editor/export/xlsx
-GET /api/editor/export/zip
+GET /api/e/{code}/export/csv
+GET /api/e/{code}/export/xlsx
+GET /api/e/{code}/export/zip
 ```
 
 ---
@@ -207,13 +274,10 @@ Response:
   "respondent": {
     "id": 1,
     "name": "Company Ltd.",
-    "status": "in_progress",
-    "valid_from": "...",
-    "valid_until": "..."
+    "status": "in_progress"
   },
   "answers": {
-    "question-1": "Answer value",
-    "question-2": ["option1", "option2"]
+    "question-1": "Answer value"
   },
   "files": [...]
 }
@@ -226,8 +290,7 @@ Content-Type: application/json
 
 {
   "answers": {
-    "question-1": "New answer",
-    "question-2": ["option1"]
+    "question-1": "New answer"
   }
 }
 ```
@@ -258,43 +321,16 @@ DELETE /api/form/:token/files/:fileId
 
 ---
 
-## Question Definition Schema
+## Question Types
 
-```json
-{
-  "id": "q-unique-id",
-  "type": "radio",
-  "label": "Select your preference",
-  "description": "Optional help text",
-  "variable": "preference",
-  "required": true,
-  "options": [
-    { "id": "opt-1", "label": "Option A", "value": "val01" },
-    { "id": "opt-2", "label": "Option B", "value": "val02" }
-  ],
-  "scaleConfig": {
-    "min": 0,
-    "max": 10,
-    "step": 1,
-    "labels": [
-      { "value": 0, "label": "Not at all" },
-      { "value": 10, "label": "Completely" }
-    ]
-  },
-  "maxFiles": 3
-}
-```
-
-### Question Types
-
-| Type | Fields |
-|------|--------|
-| `short_text` | label, description, variable, required |
-| `long_text` | label, description, variable, required |
-| `radio` | label, options, required |
-| `checkbox` | label, options, required |
-| `scale` | label, scaleConfig, required |
-| `file` | label, maxFiles, required |
+| Type | Description |
+|------|-------------|
+| `short_text` | Single-line text input |
+| `long_text` | Multi-line textarea |
+| `radio` | Single choice from options |
+| `checkbox` | Multiple choice from options |
+| `scale` | Numeric scale with labels |
+| `file` | File upload |
 
 ---
 
