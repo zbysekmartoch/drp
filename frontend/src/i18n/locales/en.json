@@ -143,7 +143,15 @@
     "responsesDescription": "Browse received responses",
     "recentResponses": "Recent Responses",
     "noResponses": "No responses yet",
-    "exportData": "Export Data"
+    "exportData": "Export Data",
+    "exportCSV": "Export to CSV",
+    "exportCSVDesc": "Simple spreadsheet format",
+    "exportExcel": "Export to Excel",
+    "exportExcelDesc": "XLSX with multiple sheets",
+    "exportBundle": "Complete Package",
+    "exportBundleDesc": "ZIP with data and uploaded files",
+    "versionHistory": "Version History",
+    "noVersions": "No version published yet"
   },
   "respondents": {
     "title": "Respondent Management",

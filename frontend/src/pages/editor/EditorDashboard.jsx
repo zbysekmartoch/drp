@@ -284,8 +284,8 @@ export default function EditorDashboard() {
               >
                 <Download className="text-gray-600" size={20} />
                 <div className="text-left">
-                  <p className="font-medium">Export do CSV</p>
-                  <p className="text-sm text-gray-500">Jednoduchý tabulkový formát</p>
+                  <p className="font-medium">{t('dashboard.exportCSV')}</p>
+                  <p className="text-sm text-gray-500">{t('dashboard.exportCSVDesc')}</p>
                 </div>
               </button>
 
@@ -296,8 +296,8 @@ export default function EditorDashboard() {
               >
                 <Download className="text-green-600" size={20} />
                 <div className="text-left">
-                  <p className="font-medium">Export do Excel</p>
-                  <p className="text-sm text-gray-500">XLSX s více listy</p>
+                  <p className="font-medium">{t('dashboard.exportExcel')}</p>
+                  <p className="text-sm text-gray-500">{t('dashboard.exportExcelDesc')}</p>
                 </div>
               </button>
 
@@ -308,8 +308,8 @@ export default function EditorDashboard() {
               >
                 <Download className="text-purple-600" size={20} />
                 <div className="text-left">
-                  <p className="font-medium">Kompletní balíček</p>
-                  <p className="text-sm text-gray-500">ZIP s daty a nahranými soubory</p>
+                  <p className="font-medium">{t('dashboard.exportBundle')}</p>
+                  <p className="text-sm text-gray-500">{t('dashboard.exportBundleDesc')}</p>
                 </div>
               </button>
             </div>
@@ -318,7 +318,7 @@ export default function EditorDashboard() {
           {/* Versions */}
           <div className="card">
             <div className="card-header">
-              <h2 className="font-semibold">Historie verzí</h2>
+              <h2 className="font-semibold">{t('dashboard.versionHistory')}</h2>
             </div>
             <div className="card-body">
               {dashboard?.versions?.length > 0 ? (
@@ -340,8 +340,7 @@ export default function EditorDashboard() {
               ) : (
                 <div className="text-center py-8 text-gray-500">
                   <AlertCircle className="mx-auto mb-2" size={24} />
-                  <p>Zatím nebyla publikována žádná verze</p>
-                  <p className="text-sm mt-1">Pro publikování použijte Editor</p>
+                  <p>{t('dashboard.noVersions')}</p>
                 </div>
               )}
             </div>
@@ -350,13 +349,13 @@ export default function EditorDashboard() {
           {/* Description */}
           <div className="card">
             <div className="card-header">
-              <h2 className="font-semibold">Popis dotazníku</h2>
+              <h2 className="font-semibold">{t('common.description')}</h2>
             </div>
             <div className="card-body">
               {questionnaire.description ? (
                 <p className="text-gray-600">{questionnaire.description}</p>
               ) : (
-                <p className="text-gray-400 italic">Bez popisu</p>
+                <p className="text-gray-400 italic">-</p>
               )}
             </div>
           </div>

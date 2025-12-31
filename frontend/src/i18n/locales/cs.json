@@ -143,7 +143,15 @@
     "responsesDescription": "Procházejte přijaté odpovědi",
     "recentResponses": "Poslední odpovědi",
     "noResponses": "Zatím žádné odpovědi",
-    "exportData": "Exportovat data"
+    "exportData": "Exportovat data",
+    "exportCSV": "Export do CSV",
+    "exportCSVDesc": "Jednoduchý tabulkový formát",
+    "exportExcel": "Export do Excel",
+    "exportExcelDesc": "XLSX s více listy",
+    "exportBundle": "Kompletní balíček",
+    "exportBundleDesc": "ZIP s daty a nahranými soubory",
+    "versionHistory": "Historie verzí",
+    "noVersions": "Zatím nebyla publikována žádná verze"
   },
   "respondents": {
     "title": "Správa respondentů",
