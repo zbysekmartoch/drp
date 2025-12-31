@@ -2,6 +2,8 @@
 
 ## Jak vyplnit dotazník v systému DRP
 
+**Úřad pro ochranu hospodářské soutěže (ÚOHS)**
+
 ---
 
 ## Obsah
@@ -71,9 +73,9 @@ Váš přístup k dotazníku může být časově omezen. Pokud vidíte jednu z 
 
 | Zpráva | Význam | Co dělat |
 |--------|--------|----------|
-| „Tento formulář ještě není k dispozici" | Dotazník se otevře později | Zkuste později, kontaktujte zadavatele |
-| „Platnost tohoto formuláře vypršela" | Termín pro vyplnění uplynul | Kontaktujte zadavatele |
-| „Neplatný přístupový odkaz" | Odkaz je chybný nebo deaktivovaný | Ověřte správnost odkazu, kontaktujte zadavatele |
+| „Tento formulář ještě není k dispozici" | Dotazník se otevře později | Zkuste později, kontaktujte ÚOHS |
+| „Platnost tohoto formuláře vypršela" | Termín pro vyplnění uplynul | Kontaktujte ÚOHS |
+| „Neplatný přístupový odkaz" | Odkaz je chybný nebo deaktivovaný | Ověřte správnost odkazu, kontaktujte ÚOHS |
 
 ---
 
@@ -234,7 +236,7 @@ Typicky jsou podporovány tyto formáty (může se lišit podle nastavení):
 | Dokumenty | PDF, DOC, DOCX, XLS, XLSX, TXT |
 | Obrázky | JPG, JPEG, PNG, GIF |
 | Archivy | ZIP, RAR |
-| Ostatní | Dle nastavení zadavatelem |
+| Ostatní | Dle nastavení ÚOHS |
 
 ### Omezení velikosti
 
@@ -291,7 +293,7 @@ Pokud chcete nahrát jiný soubor nebo jste nahráli nesprávný:
 
 | Problém | Příčina | Řešení |
 |---------|---------|--------|
-| „Soubor je příliš velký" | Překročen limit velikosti | Zmenšete soubor nebo kontaktujte zadavatele |
+| „Soubor je příliš velký" | Překročen limit velikosti | Zmenšete soubor nebo kontaktujte ÚOHS |
 | „Nepodporovaný formát" | Formát není povolen | Převeďte do podporovaného formátu |
 | „Nahrávání selhalo" | Výpadek připojení | Zkuste znovu, obnovte stránku |
 | Nahrávání je pomalé | Velký soubor nebo pomalé připojení | Buďte trpěliví, nezavírejte stránku |
@@ -397,7 +399,7 @@ Po úspěšném odeslání uvidíte:
 - ❌ **Nelze** přidávat nebo mazat soubory
 - ❌ **Nelze** odeslat znovu
 
-Pokud potřebujete provést změny, kontaktujte zadavatele dotazníku.
+Pokud potřebujete provést změny, kontaktujte ÚOHS dotazníku.
 
 ---
 
@@ -412,7 +414,7 @@ A: Ano, formulář je responzivní a funguje na mobilních zařízeních. Pro ne
 A: Ne, váš přístupový odkaz obsahuje unikátní identifikátor. Nepotřebujete uživatelské jméno ani heslo.
 
 **Q: Mohu sdílet svůj odkaz s kolegou?**
-A: Odkaz je přiřazen vaší organizaci. O sdílení se poraďte se zadavatelem dotazníku.
+A: Odkaz je přiřazen vaší organizaci. O sdílení se poraďte se ÚOHS dotazníku.
 
 **Q: V jakém jazyce mohu vyplnit dotazník?**
 A: Rozhraní podporuje češtinu, slovenštinu a angličtinu. Jazyk lze přepnout v pravém horním rohu. Vaše odpovědi můžete psát v libovolném jazyce.
@@ -442,13 +444,13 @@ A: Obvykle ano, ověřte u konkrétního dotazníku.
 ### Otázky k odeslání
 
 **Q: Mohu upravit odpovědi po odeslání?**
-A: Ne, po odeslání jsou odpovědi uzamčeny. Kontaktujte zadavatele.
+A: Ne, po odeslání jsou odpovědi uzamčeny. Kontaktujte ÚOHS.
 
 **Q: Dostanu potvrzení e-mailem?**
 A: Závisí na nastavení. Vždy vidíte potvrzení na obrazovce.
 
 **Q: Co když odešlu omylem?**
-A: Kontaktujte zadavatele dotazníku co nejdříve.
+A: Kontaktujte ÚOHS dotazníku co nejdříve.
 
 ---
 
@@ -463,7 +465,7 @@ A: Kontaktujte zadavatele dotazníku co nejdříve.
 2. Zkuste obnovit stránku (F5 nebo Ctrl+R)
 3. Vymažte mezipaměť prohlížeče (Ctrl+Shift+Delete)
 4. Zkuste jiný prohlížeč
-5. Kontaktujte zadavatele
+5. Kontaktujte ÚOHS
 
 ### Problém: Formulář se zobrazuje, ale nejde vyplnit
 
@@ -471,7 +473,7 @@ A: Kontaktujte zadavatele dotazníku co nejdříve.
 
 **Řešení:**
 1. Možná jste již odeslali – zkontrolujte stav
-2. Možná vypršel termín – kontaktujte zadavatele
+2. Možná vypršel termín – kontaktujte ÚOHS
 3. Zkuste obnovit stránku
 4. Vypněte blokátor reklam/rozšíření
 
@@ -513,7 +515,7 @@ Pokud problémy přetrvávají, připravte si:
 - 🔗 Přístupový odkaz (nebo jeho část)
 - 💻 Použitý prohlížeč a operační systém
 
-Kontaktujte zadavatele dotazníku prostřednictvím kontaktních údajů v původním e-mailu.
+Kontaktujte ÚOHS dotazníku prostřednictvím kontaktních údajů v původním e-mailu.
 
 ---
 
