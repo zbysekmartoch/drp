@@ -236,7 +236,9 @@
     "loginButton": "Sign In",
     "loggingIn": "Signing in...",
     "logoutButton": "Logout",
-    "invalidCredentials": "Invalid email or password"
+    "invalidCredentials": "Invalid email or password",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Register"
   },
   "language": {
     "select": "Language",

@@ -236,7 +236,9 @@
     "loginButton": "Přihlásit se",
     "loggingIn": "Přihlašuji...",
     "logoutButton": "Odhlásit se",
-    "invalidCredentials": "Neplatný e-mail nebo heslo"
+    "invalidCredentials": "Neplatný e-mail nebo heslo",
+    "noAccount": "Nemáte účet?",
+    "registerLink": "Zaregistrujte se"
   },
   "language": {
     "select": "Jazyk",
